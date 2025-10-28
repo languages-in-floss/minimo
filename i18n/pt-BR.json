@@ -1,0 +1,13 @@
+[
+    {
+        "id": "tag",
+        "translation": {
+            "one": "Tag",
+            "other": "Tags"
+        }
+    },
+    {
+        "id": "website",
+        "translation": "Site"
+    }
+]

@@ -1,0 +1,14 @@
+[
+    {
+        "id": "tag",
+        "translation": {
+            "one": "Oznaka",
+            "few": "Oznake",
+            "other": ""
+        }
+    },
+    {
+        "id": "website",
+        "translation": "Web-stranica"
+    }
+]

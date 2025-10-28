@@ -1,0 +1,15 @@
+[
+    {
+        "id": "tag",
+        "translation": {
+            "one": "Značka",
+            "two": "Znački",
+            "few": "Značke",
+            "other": "Značke"
+        }
+    },
+    {
+        "id": "website",
+        "translation": "Spletišče"
+    }
+]

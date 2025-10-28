@@ -1,0 +1,14 @@
+[
+    {
+        "id": "tag",
+        "translation": {
+            "one": "Tag",
+            "few": "Tagi",
+            "many": "Tagów"
+        }
+    },
+    {
+        "id": "website",
+        "translation": "Strona Internetowa"
+    }
+]

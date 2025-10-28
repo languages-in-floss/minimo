@@ -1,0 +1,14 @@
+[
+    {
+        "id": "toggleSidebar",
+        "translation": {
+            "one": "Alternar barra lateral",
+            "many": "",
+            "other": ""
+        }
+    },
+    {
+        "id": "website",
+        "translation": "Lloc web"
+    }
+]
