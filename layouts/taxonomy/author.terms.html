@@ -1,5 +1,4 @@
 {{- $lang := ( $.Params.lang | default $.Lang ) -}}
-
 {{ partial "header" . }}
 
 {{ partial "header/header" . }}
@@ -7,18 +6,23 @@
 <div class='container list-container'>
   <ul class='list'>
   {{ range .Data.Terms.Alphabetical }}
-    {{- $author := ( index $.Site.Data.authors .Name ) -}}
-    {{- $data := ( or ( index $author $lang ) $author ) -}}
-    {{- $name := $data.name -}}
-    <li class='item'>
-      <h2 class='item-title'>
-        {{- partial "svg/icons" "author" -}}
-        <a href='{{ ( print "authors" "/" ( .Name | urlize ) ) | relLangURL }}'>
-          {{- $name.display -}}
-        </a>
-      </h2>
-    </li>
-    {{ end }}
+	{{- $author := ( index $.Site.Data.authors .Name ) -}}
+	{{- $data := ( or ( index $author $lang ) $author ) -}}
+	{{ $name := dict }}
+	{{- if reflect.IsSlice $data }}
+	  {{- $name = $data.name -}}
+	{{ else if reflect.IsMap $data }}
+	  {{- $name = $data.name -}}
+	{{ end }}
+	<li class='item'>
+	  <h2 class='item-title'>
+		{{- partial "svg/icons" "author" -}}
+		<a href='{{ ( print "authors" "/" ( .Name | urlize ) ) | relLangURL }}'>
+		  {{- $name.display -}}
+		</a>
+	  </h2>
+	</li>
+	{{ end }}
   </ul>
 </div>
 
